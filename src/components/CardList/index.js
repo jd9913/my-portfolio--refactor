@@ -28,11 +28,11 @@ const currentItems=items.filter((item)=>item.category===category);
     return (
         <div>
         <div className="flex-row">
-            {items.map((item, i)=>(
-                <img src={require(`../../assets/small/${category}/${item.name}.jpg`).default}
-                alt={item.name}
+            {currentItems.map((app, i)=>(
+                <img src={require(`../../assets/small/highlights/${item.name}.jpg`).default}
+                alt={app.name}
                 className="img-thumbnail mx-1"
-                key={item.name}
+                key={app.name}
                 />
             )
             )

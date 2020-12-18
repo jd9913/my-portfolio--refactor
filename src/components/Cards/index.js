@@ -3,12 +3,13 @@ import { capitalizeFirstLetter } from "../../utils/helpers";
 import CardList from '../CardList';
 
 
-function Cards({currentCategory}) {
-    const {name, description }= currentCategory;
+function Cards(props) {
+    const {currentCategory }= props;
     return(
         <section>
-            <h1 data-testid="h1tag">{capitalizeFirstLetter(name)}</h1>
-            <p>{description}</p>
+            <h1 data-testid="h1tag">
+            {capitalizeFirstLetter(currentCategory.name)}</h1>
+            <p>{currentCategory.description}</p>
             <CardList category={currentCategory.name}/>
 
         </section>
