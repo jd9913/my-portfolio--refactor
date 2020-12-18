@@ -1,4 +1,4 @@
-import logo from './mountain.svg';
+// import logo from './mountain.svg';
 import './App.css';
 import About from './components/About';
 import Nav from "./components/Nav";
@@ -7,7 +7,7 @@ import Nav from "./components/Nav";
 function App() {
   return (
     <div className="App">
-      ${logo}
+      {/* ${logo} */}
     <Nav></Nav>
       
       
