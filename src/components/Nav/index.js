@@ -1,22 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { capitalizeFirstLetter } from "../../utils/helpers";
 
 
-function Nav() {
+function Nav(props) {
+    const {
+        categories=[],
+        setCurrentCategory,
+        currentCategory,
+    }=props;
 
-    const categories=[
-        {
-            name:"highlights",
-            description: "The projects that I've created or are working on"
-        },
-        {
-            name: "resume",
-            description: "a listing of my work experience"
-        },
-        {
-            name:"education",
-            description: "things I've done to better myself"
-        },
-    ];
+   useEffect(()=>{
+       document.title=capitalizeFirstLetter(currentCategory.name);
+   }, [currentCategory]);    
 
 function categorySelected(){
     console.log("This is my profile page!")
@@ -24,7 +19,7 @@ function categorySelected(){
 
     return (
 
-        <header>
+        <header className="flex-row px-1">
           <h2>
           <a data-testid='link' href="/">
               <span role="img" aria-label="sparkles" src="../../assets/images/logo/sparkles_2728.png">✨Jennifer!</span> 
@@ -37,14 +32,17 @@ function categorySelected(){
                           About Me
                       </a>
                   </li>
-                  <li>
+                  <li className="mx-2">
                       <span>Contact</span>
                   </li>
                   {categories.map((category)=>(
-                      <li className="mx-1"
-                      key={category.name}
+                      <li className={`mx-2 ${currentCategory.name === category.name && 'navActive'}`} key={category.name}
+                      
                       >
-                          <span onClick={categorySelected} >{category.name}</span>
+                          <span onClick={()=>{setCurrentCategory(category)}}
+                              >
+                              {capitalizeFirstLetter(category.name)}
+                          </span>
                       </li>
                   ))}
               </ul>
