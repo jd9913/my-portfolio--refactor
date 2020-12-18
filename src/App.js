@@ -36,7 +36,7 @@ const [currentCategory, setCurrentCategory]=useState(categories[0]);
       
       
         <main>
-        <Cards></Cards>
+        <Cards currentCategory={currentCategory}></Cards>
           <About></About>
         </main>
       </div>

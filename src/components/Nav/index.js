@@ -22,7 +22,7 @@ function categorySelected(){
         <header className="flex-row px-1">
           <h2>
           <a data-testid='link' href="/">
-              <span role="img" aria-label="sparkles" src="../../assets/images/logo/sparkles_2728.png">✨Jennifer!</span> 
+              <span role="img" aria-label="sparkles" >✨Jennifer!</span> 
           </a>
           </h2> 
           <nav>
