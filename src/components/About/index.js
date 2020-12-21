@@ -10,10 +10,10 @@ function About() {
       
         <Card className="grid-item">
           <Card.Img
-            id="self-portrait"
+            id="self-image"
             variant="top"
             src={selfImage}
-            alt="self-portrait"
+            alt="self-import"
             style={{ width: "25%" }}
           />
           <Card.Body>
