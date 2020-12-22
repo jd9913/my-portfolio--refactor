@@ -1,23 +1,25 @@
 import React from 'react';
 import "./topmenu.css";
-import {Navbar, Nav, NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
+
+import Nav from 'react-bootstrap/Nav';
+import { Container } from 'react-bootstrap';
 
 
 function TopMenu() {
 
-    const categories=[
+    const categories = [
         {
-            name:"Highlights",
+            name: "Highlights",
             description: "The projects that I've created or are working on",
             link: "#highlights",
             test: "highlight"
         },
         {
             name: "Contact",
-            description:"Reach out to me",
+            description: "Reach out to me",
             link: "#contact-form",
             test: "contact"
-        }, 
+        },
         {
             name: "About Me",
             description: "Who am I",
@@ -34,33 +36,25 @@ function TopMenu() {
         // },
     ];
 
-function categorySelected(){
-    console.log("This is my profile page!")
-}
+    function categorySelected() {
+        console.log("This is my profile page!")
+    }
 
     return (
 
-      <Navbar>  
-          <Navbar.Brand>
-          <a data-testid='link' href="/">
-              <span role="img" aria-label="sparkles" src="../../assets/images/logo/sparkles_2728.png">✨Jennifer!</span> 
-          </a>
-          </Navbar.Brand> 
-           <Nav className="mr-auto">
-              <Nav.Link className="menu-text">
-                          
-                  {categories.map((category)=>(
-                      <li className="menu-text"
-                      key={category.name} >
-                          <a href={category.link} data-testid={category.test}>
-                          <span onClick={categorySelected} >{category.name}</span>
-                          </a>
-                      </li>
-                  ))}
-              </Nav.Link>
-          </Nav> 
-          
-        </Navbar>
+        <Container className="grid-container" data-testid='link' href="/" >
+            <Nav id="brand">
+                <span role="img" aria-label="sparkles" src="../../assets/images/logo/sparkles_2728.png">✨Jennifer!</span>
+
+                {categories.map((category, index) => (
+                    <Nav.Item className="mr-auto">
+                        <Nav href={category.link} eventKey={index} data-testid={category.test} />
+                        <span onClick={categorySelected} >{category.name}</span>
+                    </Nav.Item>
+                ))}
+            </Nav>
+
+        </Container>
     );
 }
 
