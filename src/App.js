@@ -4,6 +4,7 @@ import './App.css';
 import About from './components/About';
 import Nav from "./components/Nav";
 import Highlights from "./components/Highlights";
+import ContactForm from "./components/Contact";
 
 
 function App() {
@@ -13,9 +14,11 @@ function App() {
     <Nav></Nav>
       
         <main>
-          <About></About>
+          
           
       <Highlights/>
+      <About></About>
+      <ContactForm></ContactForm>
       
         </main>
       </div>
