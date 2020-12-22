@@ -10,7 +10,7 @@ const AppDetails = ({ details }) => {
         <Card.Img
           id="app"
           variant="top"
-          src={require(`../../assets/images/apps/${details.filename}`)}
+          src={require(`../../assets/images/apps/${details.filename}`).default}
           alt={details.alt}
           style={{ width: "25%" }}
         />
