@@ -6,7 +6,7 @@ function ContactForm() {
     //JSX
 
     return (
-        <section>
+        <section className="grid-container">
             <h1>Contact me</h1>
             <form id="contact-form">
                 <div>

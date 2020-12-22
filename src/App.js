@@ -2,7 +2,7 @@
 import './App.css';
 
 import About from './components/About';
-import Nav from "./components/Nav";
+import TopMenu from "./components/TopMenu";
 import Highlights from "./components/Highlights";
 import ContactForm from "./components/Contact";
 
@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
     
-    <Nav></Nav>
+    <TopMenu/>
       
         <main>
           

@@ -6,8 +6,8 @@ import Card from "react-bootstrap/Card";
 
 function About() {
   return (
-    <section className="grid-container">
-      
+    <section className="grid-container" id="about">
+      <h1>About Me</h1>
         <Card className="grid-item">
           <Card.Img
             id="self-image"

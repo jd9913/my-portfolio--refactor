@@ -3,6 +3,7 @@ import Card from "react-bootstrap/Card";
 
 const AppDetails = ({ details }) => {
 
+  
 
   return (
     <Card>
@@ -17,6 +18,11 @@ const AppDetails = ({ details }) => {
         <Card.Body>
           <Card.Title className="card-title">{details.name}</Card.Title>
           <Card.Text>{details.desc}</Card.Text>
+          </Card.Body>
+          <Card.Body>
+          <Card.Link href={details.repoInd}>Individual Repository</Card.Link><br/>
+          <Card.Link href={ details.repoTeam }>Team Repository</Card.Link><br/>
+          <Card.Link href={details.deploy}>Live website deployment</Card.Link><br/>
         </Card.Body>
       </Card>
     </Card>
