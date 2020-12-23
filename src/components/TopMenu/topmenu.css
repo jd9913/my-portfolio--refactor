@@ -1,20 +1,26 @@
 
 
-#brand{
-    text-align: left;
+#branding{
+    text-align: center;
     font-size: 38px;
     color: var(--cloudBurst);
     font-family:cursive;
 }
 
-.mr-auto{
+#buttons{
     text-align: right;
-    font-size: 20px;
-    color: var(--cloudBurst);
     text-transform: uppercase;
-    /* list-style-type: none; */
-    /* text-decoration: none; */
-    
-  
+    color: var(--satinLinen);
+    padding: 3px;
+    margin-right: 2px;
+    border-radius: 3px;
+    border-style: solid;
+    background-color: var(--stormGray);
+    text-decoration: none;
+
 }
 
+.jumbotron{
+    text-align: center;
+    background: "../../assets/images/self/jennifer-Schlierman-logo3.png";
+}
