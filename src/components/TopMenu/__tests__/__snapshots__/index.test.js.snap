@@ -2,63 +2,59 @@
 
 exports[`Nav component matches snapshot 1`] = `
 <DocumentFragment>
-  <header>
-    <h2>
-      <a
-        data-testid="link"
-        href="/"
-      >
+  <section>
+    <div
+      class="branding grid-container jumbotron"
+      data-testid="link"
+      href="/"
+    >
+      <p>
         <span
           aria-label="sparkles"
           role="img"
           src="../../assets/images/logo/sparkles_2728.png"
-        >
-          ✨Jennifer!
-        </span>
-      </a>
-    </h2>
-    <nav>
-      <ul
-        class="flex-row"
+        />
+      </p>
+      <h1>
+        ✨Jennifer!
+      </h1>
+      <p />
+    </div>
+    <div>
+      <a
+        class="btn btn-primary btn-lg"
+        data-testid="highlight"
+        href="#highlights"
+        id="buttons"
       >
-        <li
-          class="mx-2"
-        >
-          <a
-            data-testid="about"
-            href="#about"
-          >
-            About Me
-          </a>
-        </li>
-        <li>
-          <span>
-            Contact
-          </span>
-        </li>
-        <li
-          class="mx-1"
-        >
-          <span>
-            highlights
-          </span>
-        </li>
-        <li
-          class="mx-1"
-        >
-          <span>
-            resume
-          </span>
-        </li>
-        <li
-          class="mx-1"
-        >
-          <span>
-            education
-          </span>
-        </li>
-      </ul>
-    </nav>
-  </header>
+        <span>
+          Highlights
+        </span>
+         
+      </a>
+      <a
+        class="btn btn-primary btn-lg"
+        data-testid="contact"
+        href="#contact-form"
+        id="buttons"
+      >
+        <span>
+          Contact
+        </span>
+         
+      </a>
+      <a
+        class="btn btn-primary btn-lg"
+        data-testid="about"
+        href="#about"
+        id="buttons"
+      >
+        <span>
+          About Me
+        </span>
+         
+      </a>
+    </div>
+  </section>
 </DocumentFragment>
 `;

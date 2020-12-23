@@ -1,17 +1,17 @@
 import React from 'react';
 import {render, cleanup} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import Nav from '..';
+import TopMenu from '..';
 
 afterEach(cleanup);
 
 describe('Nav component', ()=>{
     it('renders', ()=>{
-        render(<Nav/>);
+        render(<TopMenu/>);
     });
 
     it('matches snapshot', ()=>{
-        const { asFragment } = render(<Nav/>);
+        const { asFragment } = render(<TopMenu/>);
         expect (asFragment()).toMatchSnapshot();
     })
 
@@ -21,7 +21,7 @@ describe('Nav component', ()=>{
 
 describe('emoji is visible', ()=>{
     it('inserts emoji into the h2', ()=>{
-        const { getByLabelText }=render(<Nav/>);
+        const { getByLabelText }=render(<TopMenu/>);
         expect(getByLabelText('sparkles')).toHaveTextContent('✨')
     })
 
@@ -29,7 +29,7 @@ describe('emoji is visible', ()=>{
 
 describe('links are visible', ()=>{
     it('inserts text into the links', ()=>{
-        const { getByTestId }=render(<Nav/>);
+        const { getByTestId }=render(<TopMenu/>);
         expect(getByTestId('link')).toHaveTextContent('Jennifer!');
         expect(getByTestId('about')).toHaveTextContent('About Me');
 
