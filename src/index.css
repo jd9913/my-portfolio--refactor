@@ -6,3 +6,23 @@
   --cloudBurst:#222d58;
 }
 
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+a {
+	border-radius: 5px;
+	color: var(--satinLinen);
+	font-weight: 600;
+	padding: 2px 4px;
+	margin-left: -2px;
+	margin-right: -2px;
+	
+}
+
+a:hover {
+  text-decoration: underline;
+}
+

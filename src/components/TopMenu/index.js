@@ -56,9 +56,9 @@ function TopMenu() {
           </span>
         </p>
       </Jumbotron>
-      <div>
+      <div className="navigation">
         {categories.map((category, index) => (
-          <Button href={category.link} key={index} data-testid={category.test} variant="primary" size="lg" id="buttons">
+          <Button href={category.link} key={index} data-testid={category.test} variant="primary" size="lg" id="button">
             <span>{category.name}</span>{" "}
           </Button>
         ))}
